@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <style type="text/css">
+      .unicorn-mode{
+        background-color: #AAA;
+      }
+    </style>
+  </head>
+  <body>
+
+
+     <form class="js-form" action="" method="POST">
+      First name:<br>
+      <input id="firstname" type="text" name="firstname" >
+      <br>
+      Last name:<br>
+      <input id="lastname" type="text" name="lastname">
+      <input type="submit" name="Next" value="Submit" class="forms" id="1">
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+    <button id="hide"> Hide </button>
+    <button class="unicorn"> Unicorn </button>
+
+    <button> Hide Button </button>
+    <button> Hide Button </button>
+    <button> Hide Button </button>
+    <button> Hide Button </button>
+
+    <section class="all">
+    <div class="container" style="margin-top: 50px;">
+      <button class="btn btn-primary hello-button">Do Something</button>
+    </div>
+
+    <p> Hola mundo! </p>
+
+    <button class="js-pizza"> Pizza </button>
+
+    <button id="cookies"> Cookies </button>
+
+    <a href="#shakes">Shakes</a>
+
+    <button data-hook="coffee donuts"> Coffee </button>
+
+    <ul class="list">
+      <li> Zero </li>
+      <li> One  </li>
+      <li> Two </li>
+      <li> Three</li>
+    </ul>
+
+    <p> I like pizza. </p>
+    <h1 id="title">jQuery Exercises</h1>
+    <button class="js-tacos">Tacos</button>
+    <button data-action="do stuff"> Do Stuff</button>
+
+   
+
+    <div class="container">
+      
+    </div>
+
+    <input type="text" id="info" value="Hello world">
+
+    <p> Add hdfsdflsdfsld</p>
+    </section>
+
+    <script type="text/javascript">
+ 
+      $(document).ready(function() {
+        $('form').on('submit', function(event){
+          var firstname = $('#firstname').val();
+          var lastname = $('#lastname').val();
+          if(firstname == "" || lastname == "") {
+            event.preventDefault();
+            alert("Relleno esto!!")
+          }
+        });
+      });
+      $('#hide').on('click',function(){
+        $('.all').hide();
+      });
+      $('.unicorn').on('click', function(){
+        $('.all').toggleClass('unicorn-mode');
+      });
+      $('#hello-button').on('click', function () {
+        alert('hello world');
+      });
+      $('button').on('click', function(event){
+        var currentDOMElement = event.currentTarget
+        $(currentDOMElement).toggle();
+      });
+    </script>
+  </body>
+</html>
+

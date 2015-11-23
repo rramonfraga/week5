@@ -49,7 +49,7 @@ $('.js-form').on('submit',function(event){
   event.preventDefault();
 });
 
-$('.hide-show a').on('click', function(){
+$('.hide-show .link a').on('click', function(){
   $('#hide').toggle();
   $('#show').toggle();
   show_list();

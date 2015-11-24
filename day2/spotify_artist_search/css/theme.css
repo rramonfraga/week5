@@ -1,0 +1,31 @@
+.menu{
+  width: 60%;
+  margin: 30px auto;
+}
+
+.title{
+  text-align: center;
+}
+.container{
+  width: 60%;
+  margin: 30px auto;
+  border: 2px solid black;
+  padding: 15px 5px;
+}
+
+.container-artist{
+  width: 90%;
+  margin: 30px auto;
+}
+.container-album{
+  width: 40%;
+  margin: 30px auto;
+}
+.search{
+  width: pixels;
+}
+
+.js-artist-img{
+  width: 130px;
+  height: 130px;
+}

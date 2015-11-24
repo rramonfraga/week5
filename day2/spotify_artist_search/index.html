@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spotify Artist Searcher</title>
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+  <nav class="menu">
+    <h1 class="title"> Spotify Artist Searcher </h1>
+  </nav>
+  <section class="container">
+    <form> 
+      <input class="js-search" type="text" name="search" placeholder="Search">
+      <button class="js-submit" type="submit"> Search </button>
+    </form>
+  </section>
+  <section class="container-artist">
+    <section class="row">
+      <ul class="js-artist-list list-group"></ul>
+    </section>
+  </section>
+  <section class="container-album">
+    <section class="row">
+      <ul class="js-album-list list-group"></ul>
+    </section>
+  </section>
+
+
+  <script type="text/javascript" src="scripts/spotify_artist_search.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
+</body>
+</html>

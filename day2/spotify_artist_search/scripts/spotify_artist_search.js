@@ -37,22 +37,23 @@ $('.js-submit').on('click', fetchArtist);
 //--------------------------------------
 
 function fetchAlbums (event) {
-  $('.js-album-list').text("");
   var id = event.currentTarget.dataset.id;
   event.preventDefault();
   var url = 'https://api.spotify.com/v1/artists/'+id+'/albums';
   var request = $.get(url);
  
   function handleAlbums (albums) {
-    console.log(albums);
+    $('#js-modal-body, #js-modal-title').empty();
+    $('.modal-body').text("");
     var index = 1;
+    var html = "<ul>";
     albums.items.forEach( function appendLi(album){
-
-      var html = '<li list-group-item">' + album.name + '</li>';
-      $('.js-album-list').append(html);
-      });
-    };
-  
+      html = html + '<li list-group-item">' + album.name + '</li>';
+    });
+    html = html + "</ul>";
+    $('.modal-body').append(html);
+    $('#js-modal').modal('show');
+  }
 
   function handleError (err1, err2, err3) {
     console.error('OH NO!!', err1, err2, err3);
@@ -63,3 +64,5 @@ function fetchAlbums (event) {
 }
 
 $('.container-artist').on('click', '.js-artist-img', fetchAlbums);
+
+
